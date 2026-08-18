@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Little Surprise For You ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="petals"></div>
+
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="orb orb1"></span>
+    <span class="orb orb2"></span>
+    <span class="orb orb3"></span>
+    <span class="orb orb4"></span>
+  </div>
+
+  <section id="lockScreen" class="lock-screen">
+    <div class="lock-content">
+      <div class="lock-icon">♡</div>
+      <p class="mini-label">For You, My Love</p>
+      <h1>A little secret<br>for someone special.</h1>
+      <p class="lock-subtitle">Enter our scret code</p>
+
+      <div class="pin-box">
+        <div class="pin-dots" id="pinDots"></div>
+
+        <div class="pin-pad">
+          <button class="pin-btn" data-num="1">1</button>
+          <button class="pin-btn" data-num="2">2</button>
+          <button class="pin-btn" data-num="3">3</button>
+          <button class="pin-btn" data-num="4">4</button>
+          <button class="pin-btn" data-num="5">5</button>
+          <button class="pin-btn" data-num="6">6</button>
+          <button class="pin-btn" data-num="7">7</button>
+          <button class="pin-btn" data-num="8">8</button>
+          <button class="pin-btn" data-num="9">9</button>
+          <button class="pin-btn pin-btn-action" id="pinClear">X</button>
+          <button class="pin-btn" data-num="0">0</button>
+          <button class="pin-btn pin-btn-action" id="pinDelete">⌫</button>
+        </div>
+      </div>
+
+      <p id="passwordError" class="error"></p>
+      <p class="hint">Hint: Today ❤️</p>
+    </div>
+  </section>
+
+  <div id="site" class="site hidden">
+
+    <section class="hero reveal">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="mini-label">🌸Your Special Day🌸</p>
+        <h1>Happy Birthday,<br><span id="nameHero">Sayang</span> ♡</h1>
+        <p>August 19, the most special day</p>
+        <div class="scroll-indicator">
+          <span></span>
+          <small>SCROLL</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro reveal">
+      <div class="section-inner narrow">
+        <p class="mini-label">- A SMALL BEGINNING -</p>
+        <h2>I don't know where to start.</h2>
+        <p class="large-text">
+          So I made this little place for you. It may be simple, but every part of it was made just for you.
+        </p>
+      </div>
+    </section>
+
+    <section class="letter-section reveal">
+      <div class="section-inner narrow letter-wrap">
+        <p class="mini-label">- FROM MY HEART -</p>
+        <h2>A Letter For You</h2>
+
+        <div class="letter-paper">
+          <p class="letter-date">19 · 08 · 2026</p>
+          <h3>Dear <span id="nameLetter">Sayang</span>,</h3>
+          <div id="letterText"></div>
+          <p class="signature">with all my love,<br><span>Snupiyyy ♡</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="photo-section reveal">
+      <div class="section-inner">
+        <div class="section-title">
+          <p class="mini-label"></p>
+          <h2></h2>
+        </div>
+
+        <div class="photo-grid">
+          <figure class="photo-card tall">
+            <img src="foto1.jpg" alt="Kenangan 1" onerror="this.style.display='none';this.parentElement.classList.add('empty-photo')">
+            <figcaption></figcaption>
+          </figure>
+          <figure class="photo-card">
+            <img src="foto2.jpg" alt="Kenangan 2" onerror="this.style.display='none';this.parentElement.classList.add('empty-photo')">
+            <figcaption></figcaption>
+          </figure>
+          <figure class="photo-card">
+            <img src="foto3.jpg" alt="Kenangan 3" onerror="this.style.display='none';this.parentElement.classList.add('empty-photo')">
+            <figcaption></figcaption>
+          </figure>
+        </div>
+
+        <p class="photo-note">Happy Birthday Love.♡</p>
+      </div>
+    </section>
+
+    <section class="quote-section reveal">
+      <div class="section-inner narrow">
+        <div class="quote-mark">“</div>
+        <blockquote>
+          Some people become a beautiful part of your story without even realizing how much they mean to you.
+        </blockquote>
+        <p>Dan kamu adalah salah satunya.</p>
+      </div>
+    </section>
+
+    <section class="music-section reveal">
+      <div class="section-inner music-layout">
+        <div>
+          <p class="mini-label">- OUR SONG -</p>
+          <h2>Special Playlist</h2>
+          <p class="large-text">Songs that always remind me of you</p>
+        </div>
+
+        <div class="player">
+          <div class="album">
+            <span>♡</span>
+          </div>
+          <div class="song-info">
+            <small>NOW PLAYING</small>
+            <h3 id="songTitle">Our Little Song</h3>
+            <p>for us</p>
+          </div>
+          <button id="musicButton" onclick="toggleMusic()">▶</button>
+          <audio id="music" loop>
+            <source id="musicSource" src="music1.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="song-list" id="songList"></div>
+      </div>
+    </section>
+
+    <section class="reasons reveal">
+      <div class="section-inner">
+        <p class="mini-label">- WHY YOU -</p>
+        <h2>The little things I love about you.</h2>
+
+        <div class="reason-grid">
+          <article><span>01</span><h3>Your smile</h3><p>Senyummu selalu punya cara sendiri untuk membuat suasana terasa lebih baik.</p></article>
+          <article><span>02</span><h3>Your presence</h3><p>Ada kamu saja sudah membuat banyak hal terasa lebih menyenangkan.</p></article>
+          <article><span>03</span><h3>Your little things</h3><p>Hal-hal kecil yang mungkin kamu anggap biasa justru sering aku ingat.</p></article>
+          <article><span>04</span><h3>Just you</h3><p>Aku tidak butuh alasan yang rumit. Aku senang karena kamu adalah kamu.</p></article>
+        </div>
+      </div>
+    </section>
+
+    
+<section class="bottle-section reveal">
+  <div class="section-inner narrow">
+    <p class="mini-label">- LITTLE NOTES -</p>
+    <h2>A bottle full<br>of little wishes.</h2>
+    <p class="large-text"></p>
+
+    <button id="quoteBottle" class="glass-bottle" aria-label="Buka kertas dari botol">
+      <span class="bottle-neck"></span>
+      <span class="bottle-cork"></span>
+      <span class="bottle-body">
+        <i class="bottle-paper bp1">♡</i>
+        <i class="bottle-paper bp2">✦</i>
+        <i class="bottle-paper bp3">♡</i>
+        <i class="bottle-paper bp4">✧</i>
+        <i class="bottle-paper bp5">♡</i>
+      </span>
+      <span class="bottle-shine"></span>
+    </button>
+
+    <div id="quoteCard" class="quote-card">
+      <span class="quote-card-label">A NOTE FOR YOU</span>
+      <p id="quoteText">Ada satu pesan kecil yang menunggumu di dalam botol. ♡</p>
+    </div>
+  </div>
+</section>
+<section class="birthday-section reveal">
+      <div class="section-inner narrow">
+        <p class="mini-label">- YOUR DAY -</p>
+        <h2>Today is about you.</h2>
+        <div class="birthday-number">♥</div>
+        <p class="large-text">
+          Semoga umur baru ini membawa lebih banyak hal yang membuat kamu bahagia.
+          Semoga langkahmu selalu menemukan tempat yang baik untuk pulang.
+        </p>
+      </div>
+    </section>
+
+    <section class="final-section reveal">
+      <div class="firework-container" id="fireworks"></div>
+      <div class="section-inner narrow">
+        <p class="mini-label">- ONE LAST THING -</p>
+        <h2>Happy Birthday,<br><span id="nameFinal">Sayang</span> ❤️</h2>
+        <p class="final-text">
+          Terima kasih sudah hadir di hidupku. Terima kasih untuk semua cerita,
+          tawa, waktu, dan kenangan yang sudah kita punya.
+        </p>
+        <button class="celebrate-btn" onclick="celebrate()">Make a wish ✨</button>
+        <p class="end-note">If you’ve scrolled this far, it means you’ve reached the end.<br>But I hope this is only the beginning of many more memories.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
